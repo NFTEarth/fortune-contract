@@ -756,19 +756,19 @@ Pausable
 
             round.deposits.push(
                 Deposit({
-            tokenType: TokenType.ETH,
-            tokenAddress: address(0),
-            tokenId: 0,
-            tokenAmount: msg.value,
-            depositor: msg.sender,
-            withdrawn: false,
-            currentEntryIndex: currentEntryIndex
-            })
+                    tokenType: TokenType.ETH,
+                    tokenAddress: address(0),
+                    tokenId: 0,
+                    tokenAmount: msg.value,
+                    depositor: msg.sender,
+                    withdrawn: false,
+                    currentEntryIndex: currentEntryIndex
+                })
             );
 
-        unchecked {
-            roundDepositCount += 1;
-        }
+            unchecked {
+                roundDepositCount += 1;
+            }
         }
 
         if (depositsCalldataLength != 0) {
@@ -957,9 +957,9 @@ Pausable
                 uint256[] memory currentEntryIndexArray = new uint256[](count);
                 for (uint256 i; i < count; ) {
                     currentEntryIndexArray[i] = uint256(round.deposits[i].currentEntryIndex);
-                unchecked {
-                    ++i;
-                }
+                    unchecked {
+                        ++i;
+                    }
                 }
 
                 uint256 currentEntryIndex = currentEntryIndexArray[_unsafeSubtract(count, 1)];
