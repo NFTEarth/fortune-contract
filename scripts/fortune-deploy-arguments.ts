@@ -2,7 +2,7 @@ export default [
   [
     '0x7D3E5dD617EAF4A3d42EA550C41097086605c4aF', // address owner;
     '0x7D3E5dD617EAF4A3d42EA550C41097086605c4aF', // address operator;
-    10,// uint40 maximumNumberOfDepositsPerRound;
+    50,// uint40 maximumNumberOfDepositsPerRound;
     50,// uint40 maximumNumberOfParticipantsPerRound;
     300,// uint40 roundDuration;
     5000000000000000,// uint256 valuePerEntry;
