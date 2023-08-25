@@ -5,7 +5,11 @@ async function main() {
 
   console.log("Deploying contracts with the account:", deployer.address);
 
-  const priceOracle = await ethers.deployContract("PriceOracle", [deployer.address, "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6"]);
+  const priceOracle = await ethers.deployContract("PriceOracle",
+    [
+      deployer.address,
+      "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6" // CHANGE WETH ADDRESS Respectively
+    ]);
 
   await priceOracle.waitForDeployment();
 
